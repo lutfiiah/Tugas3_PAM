@@ -32,19 +32,21 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.Maha
 
     @Override
     public void onBindViewHolder(@NonNull MahasiswaViewHolder holder, int position) {
-        Mahasiswa mhs = data.get(position);
-        Log.d(MainActivity.TAG,"data "+position);
-        Log.d(MainActivity.TAG,"nim "+mhs.nim);
-        Log.d(MainActivity.TAG,"nama "+mhs.nama);
-
-        holder.tvNim.setText(mhs.nim);
-        holder.tvNama.setText(mhs.nama);
+        Mahasiswa mahasiswa = data.get(position);  // Gunakan data, bukan mahasiswaList
+        holder.tvNim.setText(mahasiswa.getNim());
+        holder.tvNama.setText(mahasiswa.getNama());
     }
+
 
     @Override
     public int getItemCount() {
         Log.d(MainActivity.TAG,"Jumlah data "+data.size());
         return data.size();
+    }
+
+    public void addItem(Mahasiswa mahasiswa) {
+        data.add(mahasiswa);
+        notifyItemInserted(data.size() - 1);
     }
 
     class MahasiswaViewHolder extends RecyclerView.ViewHolder {

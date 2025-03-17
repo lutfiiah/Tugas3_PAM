@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Recycler1</string>
+
+    <string name="hint_nim">Masukkan NIM</string>
+    <string name="hint_nama">Masukkan Nama</string>
+    <string name="button_simpan">SIMPAN</string>
+
     <string-array name="nim">
         <item>1001</item>
         <item>1002</item>
@@ -11,6 +16,7 @@
         <item>1008</item>
         <item>1009</item>
     </string-array>
+
     <string-array name="nama">
         <item>Android</item>
         <item>iPhone</item>
